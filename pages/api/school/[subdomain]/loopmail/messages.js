@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
     res.send(
-        await fetch(`https://${req.query.subdomain}.schoolloop.com/mapi/login?version=3&devToken=postman&devOS=postman&year=${new Date().getFullYear()}`, {
+        await fetch(`https://${req.query.subdomain}.schoolloop.com/mapi/mail_messages?studentID=${req.query.id}`, {
             method: "GET", headers: {
                 authorization: req.cookies.auth
             },

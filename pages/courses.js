@@ -1,6 +1,23 @@
 // posts will be populated at build time by getStaticProps()
-import { Table } from '@nextui-org/react';
-function Courses({ courses }) {
+import { Table, Loading, Container } from '@nextui-org/react';
+import useSWR from 'swr'
+
+const fetcher = (...args) => fetch(...args).then(res => res.json())
+
+function Courses() {
+    const { data, error } = useSWR('/api/school/hmbhs/courses?id=1593846838236', fetcher)
+
+    if (error) return <div>
+        <Loading color="error" textColor="error">
+            Error
+        </Loading>
+    </div>
+    if (!data) return <Container>
+        <div>
+        <Loading type="gradient" />
+        </div>
+    </Container>
+
     return (
         <Table aria-label="Example table with static content"
                css={{
@@ -15,8 +32,8 @@ function Courses({ courses }) {
                 <Table.Column>Teacher</Table.Column>
             </Table.Header>
             <Table.Body>
-            {courses.map((course) => (
-                <Table.Row key={course.periodID}>
+            {data.map((course) => (
+                <Table.Row key={course.periodID} >
                     <Table.Cell>{course.courseName}</Table.Cell>
                     <Table.Cell>{course.grade != "null" ? course.grade : ''}</Table.Cell>
                     <Table.Cell>{course.teacherName}</Table.Cell>
@@ -25,24 +42,6 @@ function Courses({ courses }) {
             </Table.Body>
         </Table>
     )
-}
-
-// This function gets called at build time on server-side.
-// It won't be called on client-side, so you can even do
-// direct database queries.
-export async function getStaticProps() {
-    // Call an external API endpoint to get posts.
-    // You can use any data fetching library
-    const res = await fetch(`https://hmbhs.schoolloop.com/mapi/report_card?studentID=1593846838236`, { headers: { 'Authorization': `Basic c2plZmZzMjQ6MTIwMzIwMDU=` } })
-    const courses = await res.json()
-
-    // By returning { props: { posts } }, the Blog component
-    // will receive `posts` as a prop at build time
-    return {
-        props: {
-            courses,
-        },
-    }
 }
 
 export default Courses
