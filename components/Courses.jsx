@@ -5,27 +5,24 @@ import useSWR from "swr";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 function Courses() {
-  const { data, error } = useSWR(
-    "/api/school/hmbhs/courses",
-    fetcher
-  );
+  const { data, error } = useSWR("/api/school/hmbhs/courses", fetcher);
 
-  if (error)
-    return (
+  if (error) console.log(data, error);
+  return (
+    <div>
+      <Loading color="error" textColor="error">
+        Error
+      </Loading>
+    </div>
+  );
+  if (!data) console.log(data, error);
+  return (
+    <Container>
       <div>
-        <Loading color="error" textColor="error">
-          Error
-        </Loading>
+        <Loading type="gradient" />
       </div>
-    );
-  if (!data)
-    return (
-      <Container>
-        <div>
-          <Loading type="gradient" />
-        </div>
-      </Container>
-    );
+    </Container>
+  );
 
   return (
     <Table
