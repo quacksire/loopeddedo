@@ -29,7 +29,7 @@ function Courses() {
 
   return (
     <Table
-      aria-label="Example table with static content"
+      aria-label="Course List"
       css={{
         height: "auto",
         minWidth: "100%",
