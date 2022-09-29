@@ -1,28 +1,31 @@
 // posts will be populated at build time by getStaticProps()
 import { Table, Loading, Container } from "@nextui-org/react";
 import useSWR from "swr";
+import Error from "../components/Error";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 function Courses() {
   const { data, error } = useSWR("/api/school/hmbhs/courses", fetcher);
 
-  if (error) console.log(data, error);
-  return (
-    <div>
-      <Loading color="error" textColor="error">
-        Error
-      </Loading>
-    </div>
-  );
-  if (!data) console.log(data, error);
-  return (
-    <Container>
+  if (error) {
+    return (
       <div>
-        <Loading type="gradient" />
+        <Loading color="error" textColor="error">
+          <Error message="Error" error={error} />
+        </Loading>
       </div>
-    </Container>
-  );
+    );
+  }
+  if (!data) {
+    return (
+      <Container>
+        <div>
+          <Loading type="gradient" />
+        </div>
+      </Container>
+    );
+  }
 
   return (
     <Table
@@ -43,7 +46,7 @@ function Courses() {
           <Table.Row key={course.periodID}>
             <Table.Cell>{course.courseName}</Table.Cell>
             <Table.Cell>
-              {course.grade != "null" ? course.grade : ""}
+              {(course.grade = "null" ? course.grade : "")}
             </Table.Cell>
             <Table.Cell>{course.teacherName}</Table.Cell>
           </Table.Row>

@@ -1,4 +1,5 @@
 export default async function handler(req, res) {
+  console.log(req.cookies);
   if (!req.cookies.auth) return res.send(401);
 
   res.send(
