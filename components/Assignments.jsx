@@ -1,13 +1,4 @@
-// posts will be populated at build time by getStaticProps()
-import {
-  Table,
-  Loading,
-  Container,
-  Card,
-  Grid,
-  Text,
-  Link,
-} from "@nextui-org/react";
+import { Loading, Container, Card, Grid, Text, Link } from "@nextui-org/react";
 import useSWR from "swr";
 import Error from "../components/Error";
 
@@ -37,9 +28,14 @@ function Assignments() {
 
   return (
     <Container>
-      <div>
+      <Grid.Container gap={2}>
         {data.map((assignment) => (
-          <Card css={{ p: "$6", mw: "400px" }} key={assignment.iD}>
+          <Card
+            isHoverable
+            isPressable
+            css={{ p: "$6", mw: "400px" }}
+            key={assignment.iD}
+          >
             <Card.Header>
               <Grid.Container css={{ pl: "$6" }}>
                 <Grid xs={12}>
@@ -54,32 +50,35 @@ function Assignments() {
                 </Grid>
               </Grid.Container>
             </Card.Header>
-            {assignment.description != "null" && (
-              <Card.Body css={{ py: "$2" }}>
-                <Text>{assignment.description} </Text>
-              </Card.Body>
-            )}
-
-            <Card.Footer>
+            <Card.Body css={{ py: "$2" }}>
+              <Text>
+                {new Date(
+                  parseInt(toString(assignment.dueDate))
+                ).toLocaleDateString()}
+              </Text>
+            </Card.Body>
+          </Card>
+        ))}
+      </Grid.Container>
+    </Container>
+  );
+}
+/*
+<Card.Footer>
               {assignment.links && (
                   {assignment.links.map((link) => (
-                      <Link
-                  icon
+                     
+                <Link
                   color="primary"
                   target="_blank"
                   href={link.URL}
                 >
-                  Visit source code on GitHub.
+                  {link.description}
                 </Link>
+                  
                   ))}
-                
               )}
             </Card.Footer>
-          </Card>
-        ))}
-      </div>
-    </Container>
-  );
-}
+            */
 
 export default Assignments;

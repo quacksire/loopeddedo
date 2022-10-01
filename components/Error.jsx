@@ -2,7 +2,6 @@ import { Modal, useModal, Button, Text } from "@nextui-org/react";
 
 export default function Error(prop) {
   const { setVisible, bindings } = useModal();
-  console.log(prop);
   return (
     <div>
       <Button auto shadow color="secondary" onClick={() => setVisible(true)}>
