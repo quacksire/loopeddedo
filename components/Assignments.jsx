@@ -28,36 +28,33 @@ function Assignments() {
 
   return (
     <Container>
-      <Grid.Container gap={2}>
+      <Grid.Container gap={1} wrap={"wrap"}>
         {data.map((assignment) => (
-          <Card
-            isHoverable
-            isPressable
-            css={{ p: "$6", mw: "400px" }}
-            key={assignment.iD}
-          >
-            <Card.Header>
-              <Grid.Container css={{ pl: "$6" }}>
-                <Grid xs={12}>
-                  <Text h4 css={{ lineHeight: "$xs" }}>
-                    {assignment.title}
-                  </Text>
-                </Grid>
-                <Grid xs={12}>
-                  <Text css={{ color: "$accents8" }}>
-                    {assignment.courseName}
-                  </Text>
-                </Grid>
-              </Grid.Container>
-            </Card.Header>
-            <Card.Body css={{ py: "$2" }}>
-              <Text>
-                {new Date(
-                  parseInt(toString(assignment.dueDate))
-                ).toLocaleDateString()}
-              </Text>
-            </Card.Body>
-          </Card>
+          <Grid xs={4} key={assignment.iD}>
+            <Card isHoverable isPressable css={{ p: "$6", mw: "400px" }}>
+              <Card.Header>
+                <Grid.Container css={{ pl: "$6" }}>
+                  <Grid xs={12}>
+                    <Text h4 css={{ lineHeight: "$xs" }}>
+                      {assignment.title}
+                    </Text>
+                  </Grid>
+                  <Grid xs={12}>
+                    <Text css={{ color: "$accents8" }}>
+                      {assignment.courseName}
+                    </Text>
+                  </Grid>
+                </Grid.Container>
+              </Card.Header>
+              <Card.Body css={{ py: "$2" }}>
+                <Text>
+                  {new Date(
+                    parseInt(toString(assignment.dueDate))
+                  ).toLocaleDateString()}
+                </Text>
+              </Card.Body>
+            </Card>
+          </Grid>
         ))}
       </Grid.Container>
     </Container>
