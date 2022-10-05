@@ -1,11 +1,12 @@
-import { Loading, Container, Card, Grid, Text, Link } from "@nextui-org/react";
+import { Loading, Container, Card, Grid, Text} from "@nextui-org/react";
+import Link from 'next/link'
 import useSWR from "swr";
 import Error from "../components/Error";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-function Assignments() {
-  const { data, error } = useSWR("/api/school/hmbhs/assignments", fetcher);
+export default function News() {
+  const { data, error } = useSWR("/api/school/hmbhs/news", fetcher);
 
   if (error) {
     return (
@@ -29,31 +30,31 @@ function Assignments() {
   return (
     <Container>
       <Grid.Container gap={1} wrap={"wrap"}>
-        {data.map((assignment) => (
-          <Grid xs={4} key={assignment.iD}>
-            <Card isHoverable isPressable css={{ p: "$6", mw: "400px" }}>
+        {data.map((article) => (
+          <Grid xs={4} key={article.iD}>
+              <Link href={`/news/${encodeURIComponent(article.iD)}`}>
+            <Card
+              isHoverable
+              isPressable
+              variant="flat"
+              css={{ p: "$6", mw: "400px" }}
+            >
               <Card.Header>
                 <Grid.Container css={{ pl: "$6" }}>
                   <Grid xs={12}>
                     <Text h4 css={{ lineHeight: "$xs" }}>
-                      {assignment.title}
+                      {article.title}
                     </Text>
                   </Grid>
                   <Grid xs={12}>
                     <Text css={{ color: "$accents8" }}>
-                      {assignment.courseName}
+                      {article.authorName}
                     </Text>
                   </Grid>
                 </Grid.Container>
               </Card.Header>
-              <Card.Body css={{ py: "$2" }}>
-                <Text>
-                  {new Date(
-                    parseInt(toString(assignment.dueDate))
-                  ).toLocaleDateString()}
-                </Text>
-              </Card.Body>
-            </Card>
+                </Card>
+            </Link>
           </Grid>
         ))}
       </Grid.Container>
@@ -78,4 +79,4 @@ function Assignments() {
             </Card.Footer>
             */
 
-export default Assignments;
+
