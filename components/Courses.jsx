@@ -7,7 +7,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 function Courses() {
   const { data, error } = useSWR("/api/school/hmbhs/courses", fetcher);
-
+  console.log("courseData", data);
   if (error) {
     return (
       <div>

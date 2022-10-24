@@ -7,9 +7,9 @@ export default function Home() {
       <h1> Courses </h1>
       <Courses />
       <h1> Assignments </h1>
-      <AssignmentList />
+      {/* <AssignmentList /> */}
       <h1> News </h1>
-      <NewsList />
+      {/* <NewsList /> */}
     </div>
   );
 }

@@ -3,8 +3,9 @@ export default async function handler(req, res) {
 
   res.setHeader("Cache-Control", "s-maxage=3600");
   if (process.env.CSB) {
-  res.send(require("../../../../cache/news.json"));
-  return;
+    console.log("NEWS REQUEST");
+    res.send(require("../../../../cache/news.json"));
+    return;
   }
 
   res.send(

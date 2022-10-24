@@ -1,12 +1,12 @@
 import { Loading, Container, Card, Grid, Text, Link } from "@nextui-org/react";
 import useSWR from "swr";
 import Error from "../components/Error";
-import Load from "../components/Load"
+import Load from "../components/Load";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 function Assignments() {
-  const { data, error } = useSWR("/api/school/hmbhs/assignments", fetcher);
+  var { data, error } = useSWR("/api/school/hmbhs/assignments", fetcher);
 
   if (error) {
     return (
@@ -17,8 +17,7 @@ function Assignments() {
       </div>
     );
   }
-  if (!data) return <Load />
-
+  if (!data) return <Load />;
   return (
     <Container>
       <Grid.Container gap={1} wrap={"wrap"}>

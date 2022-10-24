@@ -2,8 +2,9 @@ export default async function handler(req, res) {
   if (!req.cookies.auth) return res.send(401);
   res.setHeader("Cache-Control", "s-maxage=1800");
   if (process.env.CSB) {
+    console.log("ASSMT REQUEST");
     res.send(require("../../../../cache/assignments.json"));
-    return
+    return;
   }
   res.send(
     await fetch(
