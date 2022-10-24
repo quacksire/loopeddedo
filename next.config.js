@@ -5,16 +5,21 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/',
+        source: "/",
         headers: [
+          //1593846838236
           {
-            key: 'Set-Cookie',
+            key: "Set-Cookie",
             value: `auth=Basic c2plZmZzMjQ6MTIwMzIwMDU=`,
+          },
+          {
+            key: "Set-Cookie",
+            value: `sid=1593846838236`,
           },
         ],
       },
-    ]
+    ];
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

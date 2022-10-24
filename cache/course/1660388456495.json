@@ -1,0 +1,309 @@
+[
+    {
+        "precision": "2",
+        "date": "2022-09-29T11:53:31Z",
+        "markName": "Current Grades",
+        "score": "0.9067000000000001",
+        "courseRank": "-1",
+        "courseAverage": "-1.0",
+        "numberOfStudentsInCourse": "0",
+        "scoreChange": "-0.026599999999999957",
+        "hasScore": "true",
+        "trendDate": "2022-09-29T11:53:31Z",
+        "trendScore": "0.9067000000000001",
+        "gradebookTitle": "AP Computer Science A Gradebook",
+        "gradebookDate": "2022-08-11T00:00:00Z",
+        "dropped": "false",
+        "schoolID": "1102238613474",
+        "markIDString": "current",
+        "useLongBeachScaledScoreSystem": "false",
+        "longBeachScaledScore": "4.53",
+        "scoreString": "0.9067000000000001",
+        "periodAverage": "null",
+        "fromExternalGradebook": "false",
+        "hideScore": "false",
+        "showLetterGradeIfScoreHidden": "false",
+        "periodID": "1660388456495",
+        "useWeighting": "true",
+        "grade": "A-",
+        "GradingScale": {
+            "Cutoffs": [
+                {
+                    "Start": "97.0",
+                    "description": "null",
+                    "Name": "A+"
+                },
+                {
+                    "Start": "93.0",
+                    "description": "null",
+                    "Name": "A"
+                },
+                {
+                    "Start": "90.0",
+                    "description": "null",
+                    "Name": "A-"
+                },
+                {
+                    "Start": "87.0",
+                    "description": "null",
+                    "Name": "B+"
+                },
+                {
+                    "Start": "83.0",
+                    "description": "null",
+                    "Name": "B"
+                },
+                {
+                    "Start": "80.0",
+                    "description": "null",
+                    "Name": "B-"
+                },
+                {
+                    "Start": "77.0",
+                    "description": "null",
+                    "Name": "C+"
+                },
+                {
+                    "Start": "73.0",
+                    "description": "null",
+                    "Name": "C"
+                },
+                {
+                    "Start": "70.0",
+                    "description": "null",
+                    "Name": "C-"
+                },
+                {
+                    "Start": "67.0",
+                    "description": "null",
+                    "Name": "D+"
+                },
+                {
+                    "Start": "63.0",
+                    "description": "null",
+                    "Name": "D"
+                },
+                {
+                    "Start": "60.0",
+                    "description": "null",
+                    "Name": "D-"
+                },
+                {
+                    "Start": "0.0",
+                    "description": "null",
+                    "Name": "F"
+                }
+            ]
+        },
+        "categories": [
+            {
+                "score": "0.9666666666666667",
+                "courseRank": "-1",
+                "courseAverage": "-1.0",
+                "hasScore": "true",
+                "longBeachScaledScore": "4.83",
+                "weight": "0.6",
+                "name": "Assignment"
+            },
+            {
+                "score": "0.6666666666666667",
+                "courseRank": "-1",
+                "courseAverage": "-1.0",
+                "hasScore": "true",
+                "longBeachScaledScore": "3.33",
+                "weight": "0.15",
+                "name": "Quiz"
+            }
+        ],
+        "gradeDefinitions": [
+            {
+                "keyBase64": "RQ==",
+                "key": "E",
+                "valueBase64": "RG9lcyBub3QgY291bnQ=",
+                "value": "Does not count"
+            }
+        ],
+        "teacher": {
+            "schoolID": "3497",
+            "systemID": "1569049862242",
+            "nameBase64": "UGVpbWFuaSwgTWljaGFlbA==",
+            "name": "Peimani, Michael"
+        },
+        "grades": [
+            {
+                "scoreBase64": "MTQuNTA=",
+                "score": "14.50",
+                "commentBase64": "",
+                "comment": "",
+                "percentScore": "96.67%",
+                "excused": "false",
+                "zero": "false",
+                "courseRank": "-1",
+                "courseAverage": "-1.0",
+                "changedDate": "2022-09-27T12:39:24Z",
+                "grade": "-",
+                "assignment": {
+                    "categoryNameBase64": "QXNzaWdubWVudA==",
+                    "categoryName": "Assignment",
+                    "dueDate": "2022-09-28T00:00:00Z",
+                    "maxPoints": "15.0",
+                    "titleBase64": "Q29kZS5vcmcgVW5pdCAxIFdvcms=",
+                    "title": "Code.org Unit 1 Work",
+                    "systemID": "1664103384009"
+                }
+            },
+            {
+                "scoreBase64": "null",
+                "commentBase64": "",
+                "comment": "",
+                "percentScore": "E",
+                "excused": "true",
+                "zero": "false",
+                "courseRank": "-1",
+                "courseAverage": "-1.0",
+                "changedDate": "2022-09-27T13:33:15Z",
+                "grade": "-",
+                "assignment": {
+                    "categoryNameBase64": "UHJvamVjdA==",
+                    "categoryName": "Project",
+                    "dueDate": "2022-09-23T00:00:00Z",
+                    "maxPoints": "10.0",
+                    "titleBase64": "VW5pdCAxIEFzcGhhbHQgQXJ0IFByb2plY3Q=",
+                    "title": "Unit 1 Asphalt Art Project",
+                    "systemID": "1664103384248"
+                }
+            },
+            {
+                "scoreBase64": "MTAuMDA=",
+                "score": "10.00",
+                "commentBase64": "",
+                "comment": "",
+                "percentScore": "66.67%",
+                "excused": "false",
+                "zero": "false",
+                "courseRank": "-1",
+                "courseAverage": "-1.0",
+                "changedDate": "2022-09-23T11:16:11Z",
+                "grade": "-",
+                "assignment": {
+                    "categoryNameBase64": "UXVpeg==",
+                    "categoryName": "Quiz",
+                    "dueDate": "2022-09-21T00:00:00Z",
+                    "maxPoints": "15.0",
+                    "titleBase64": "UXVpeiAxIC0gVW5pdCAx",
+                    "title": "Quiz 1 - Unit 1",
+                    "systemID": "1663402746358"
+                }
+            },
+            {
+                "scoreBase64": "RQ==",
+                "score": "E",
+                "commentBase64": "",
+                "comment": "",
+                "percentScore": "E",
+                "excused": "true",
+                "zero": "false",
+                "courseRank": "-1",
+                "courseAverage": "-1.0",
+                "changedDate": "2022-09-01T12:32:22Z",
+                "grade": "-",
+                "assignment": {
+                    "categoryNameBase64": "QXNzaWdubWVudA==",
+                    "categoryName": "Assignment",
+                    "dueDate": "2022-08-16T00:00:00Z",
+                    "maxPoints": "2.0",
+                    "titleBase64": "Q1NBIFByZS1TdXJ2ZXk=",
+                    "title": "CSA Pre-Survey",
+                    "systemID": "1660388724329"
+                }
+            }
+        ],
+        "trendScores": [
+            {
+                "numberOfZeros": "0",
+                "dropped": "false",
+                "studentID": "1593846838236",
+                "grade": "A+",
+                "score": "1.0",
+                "markIDString": "current",
+                "standardsBased": "false",
+                "periodID": "1660388456495",
+                "tourseID": "1660388456493",
+                "teacherID": "1569049862242",
+                "dayID": "1662015600000",
+                "ID": "1661588746681"
+            },
+            {
+                "numberOfZeros": "0",
+                "dropped": "false",
+                "studentID": "1593846838236",
+                "grade": "A+",
+                "score": "1.0",
+                "markIDString": "current",
+                "standardsBased": "false",
+                "periodID": "1660388456495",
+                "tourseID": "1660388456493",
+                "teacherID": "1569049862242",
+                "dayID": "1662534000000",
+                "ID": "1662527733326"
+            },
+            {
+                "numberOfZeros": "0",
+                "dropped": "false",
+                "studentID": "1593846838236",
+                "grade": "A",
+                "score": "0.9333",
+                "markIDString": "current",
+                "standardsBased": "false",
+                "periodID": "1660388456495",
+                "tourseID": "1660388456493",
+                "teacherID": "1569049862242",
+                "dayID": "1663916400000",
+                "ID": "1663403465198"
+            },
+            {
+                "numberOfZeros": "0",
+                "dropped": "false",
+                "studentID": "1593846838236",
+                "grade": "A-",
+                "score": "0.9067000000000001",
+                "markIDString": "current",
+                "standardsBased": "false",
+                "periodID": "1660388456495",
+                "tourseID": "1660388456493",
+                "teacherID": "1569049862242",
+                "dayID": "1664262000000",
+                "ID": "1664103771605"
+            },
+            {
+                "numberOfZeros": "0",
+                "dropped": "false",
+                "studentID": "1593846838236",
+                "grade": "A-",
+                "score": "0.9067000000000001",
+                "markIDString": "current",
+                "standardsBased": "false",
+                "periodID": "1660388456495",
+                "tourseID": "1660388456493",
+                "teacherID": "1569049862242",
+                "dayID": "1664434800000",
+                "ID": "1664435351361"
+            }
+        ],
+        "course": {
+            "courseCommentBase64": "null",
+            "schoolID": "",
+            "period": "4",
+            "systemID": "1660388456493",
+            "nameBase64": "QVAgQ29tcHV0ZXIgU2NpZW5jZSBB",
+            "name": "AP Computer Science A"
+        },
+        "student": {
+            "schoolID": "70532",
+            "permID": "70532",
+            "systemID": "1593846838236",
+            "nameBase64": "SmVmZnMsIFNhbXVlbA==",
+            "name": "Jeffs, Samuel"
+        }
+    }
+]
